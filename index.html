@@ -19,12 +19,14 @@
         .logo-gradient-text {
             background: linear-gradient(to right, #6d28d9, #14b8a6);
             -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
             -webkit-text-fill-color: transparent;
         }
         /* Style for the active navigation link on the current page */
         .nav-active {
             background: linear-gradient(to right, #6d28d9, #14b8a6);
             -webkit-background-clip: text;
+            background-clip: text; /* Standard property for compatibility */
             -webkit-text-fill-color: transparent;
             font-weight: 700; /* bold */
             border-bottom: 2px solid #7c3aed;
@@ -76,7 +78,7 @@
     <!-- Header / Navigation -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
+            <div class="relative flex items-center justify-between">
                 <!-- Logo -->
                 <a href="index.html" class="flex flex-col items-start flex-shrink-0">
                     <h1 class="text-3xl font-bold logo-gradient-text">BIO</h1>
@@ -84,15 +86,17 @@
                     <span class="text-xs text-gray-500 tracking-widest">COMPANY LIMITED</span>
                 </a>
 
-                <!-- Desktop Navigation with corrected order and links -->
-                <nav id="desktop-nav" class="hidden md:flex items-center space-x-6">
-                    <a href="PageCode/Product.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Products</a>
-                    <a href="#" class="nav-link nav-active hover:animate-bounce pb-1">About us</a>
-                    <a href="PageCode/Pipeline.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pipeline</a>
-                    <a href="PageCode/Resources.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Resources</a>
-                    <a href="PageCode/Pricing.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pricing</a>
-                    <a href="PageCode/Tool.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Tool</a>
-                </nav>
+                <!-- Desktop Navigation (Centering fix and reordered) -->
+                <div class="absolute left-1/2 -translate-x-1/2 hidden md:block">
+                    <nav id="desktop-nav" class="flex items-center space-x-6">
+                        <a href="#" class="nav-link nav-active hover:animate-bounce pb-1">About us</a>
+                        <a href="PageCode/Product.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Products</a>
+                        <a href="PageCode/Pipeline.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pipeline</a>
+                        <a href="PageCode/Resources.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Resources</a>
+                        <a href="PageCode/Pricing.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pricing</a>
+                        <a href="PageCode/Tool.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Tool</a>
+                    </nav>
+                </div>
 
                 <!-- Right side icons -->
                 <div class="flex items-center space-x-2">
@@ -123,8 +127,8 @@
                     Menu
                 </h3>
                 <div class="space-y-1">
-                    <a href="PageCode/Product.html" class="mobile-nav-link text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Products</a>
                     <a href="#" class="mobile-nav-link text-purple-600 font-bold bg-purple-50 hover:bg-gray-100 block px-3 py-2 rounded-md text-base">About us</a>
+                    <a href="PageCode/Product.html" class="mobile-nav-link text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Products</a>
                     <a href="PageCode/Pipeline.html" class="mobile-nav-link text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Pipeline</a>
                     <a href="PageCode/Resources.html" class="mobile-nav-link text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Resources</a>
                     <a href="PageCode/Pricing.html" class="mobile-nav-link text-gray-800 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Pricing</a>

@@ -19,12 +19,14 @@
         .logo-gradient-text {
             background: linear-gradient(to right, #6d28d9, #14b8a6);
             -webkit-background-clip: text;
+            background-clip: text; /* Added for compatibility */
             -webkit-text-fill-color: transparent;
         }
         /* Style for the active navigation link on the current page */
         .nav-active {
             background: linear-gradient(to right, #6d28d9, #14b8a6);
             -webkit-background-clip: text;
+            background-clip: text; /* Added for compatibility */
             -webkit-text-fill-color: transparent;
             font-weight: 700; /* bold */
             border-bottom: 2px solid #7c3aed;
