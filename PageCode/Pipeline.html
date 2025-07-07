@@ -97,7 +97,7 @@
                 </a>
 
                 <!-- Desktop Navigation -->
-                <nav id="desktop-nav" class="hidden md:flex items-center space-x-8">
+                <nav id="desktop-nav" class="hidden md:flex items-center justify-between flex-grow mx-8 lg:mx-16">
                     <a href="index.html" class="nav-link text-gray-600 hover:text-purple-600 transition-colors pb-1">About us</a>
                     <a href="PageCode/Pipeline.html" class="nav-link nav-active pb-1">Pipeline</a>
                     <a href="PageCode/Products.html" class="nav-link text-gray-600 hover:text-purple-600 transition-colors pb-1">Products</a>
@@ -319,25 +319,38 @@
             if (timeline) {
                 const timelineLine = timeline.querySelector('.timeline-line');
                 const timelineItems = timeline.querySelectorAll('.timeline-item');
+                const timelineDetails = timeline.querySelectorAll('details');
+
+                // Function to update the timeline's height
+                const updateTimelineHeight = () => {
+                    // Use scrollHeight for a more accurate measurement of the content height
+                    timelineLine.style.height = timeline.scrollHeight + 'px';
+                };
 
                 const observer = new IntersectionObserver((entries) => {
-                    // Check if the timeline section is intersecting with the viewport
                     if (entries[0].isIntersecting) {
                         // Animate the vertical line
-                        timelineLine.style.height = timeline.offsetHeight + 'px';
+                        updateTimelineHeight();
                         
                         // Animate each timeline item with a staggered delay
                         timelineItems.forEach((item, index) => {
                             setTimeout(() => {
                                 item.classList.add('is-visible');
-                            }, index * 200); // 200ms delay between each item
+                            }, index * 200);
                         });
-                        // Stop observing after the animation has been triggered to prevent re-triggering
                         observer.unobserve(timeline);
                     }
-                }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+                }, { threshold: 0.1 });
 
                 observer.observe(timeline);
+                
+                // Add event listeners to all details elements to recalculate height on toggle
+                timelineDetails.forEach(detail => {
+                    detail.addEventListener('toggle', () => {
+                        // Recalculate height after the toggle has happened
+                        setTimeout(updateTimelineHeight, 50); // A small delay for the DOM to update
+                    });
+                });
             }
         });
     </script>
