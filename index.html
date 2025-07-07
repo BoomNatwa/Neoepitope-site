@@ -25,6 +25,12 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .hero-gradient-text {
+            background: linear-gradient(to right, #a78bfa, #5eead4); /* Light purple to light teal */
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
         .nav-active {
             background: linear-gradient(to right, #6d28d9, #14b8a6);
             -webkit-background-clip: text;
@@ -76,7 +82,7 @@
     <!-- Header / Navigation -->
     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
         <div class="container mx-auto px-6 py-4">
-            <div class="relative flex items-center justify-between">
+            <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <a href="index.html" class="flex flex-col items-start flex-shrink-0">
                     <h1 class="text-3xl font-bold logo-gradient-text">BIO</h1>
@@ -85,16 +91,14 @@
                 </a>
 
                 <!-- Desktop Navigation -->
-                <div class="absolute left-1/2 -translate-x-1/2 hidden md:block">
-                    <nav id="desktop-nav" class="flex items-center space-x-6">
-                        <a href="#" class="nav-link nav-active hover:animate-bounce pb-1">About us</a>
-                        <a href="PageCode/Product.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Products</a>
-                        <a href="PageCode/Pipeline.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pipeline</a>
-                        <a href="PageCode/Resources.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Resources</a>
-                        <a href="PageCode/Pricing.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pricing</a>
-                        <a href="PageCode/Tool.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Tool</a>
-                    </nav>
-                </div>
+                <nav id="desktop-nav" class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="nav-link nav-active hover:animate-bounce pb-1">About us</a>
+                    <a href="PageCode/Product.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Products</a>
+                    <a href="PageCode/Pipeline.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pipeline</a>
+                    <a href="PageCode/Resources.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Resources</a>
+                    <a href="PageCode/Pricing.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pricing</a>
+                    <a href="PageCode/Tool.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Tool</a>
+                </nav>
 
                 <!-- Right side icons -->
                 <div class="flex items-center space-x-2">
@@ -125,18 +129,18 @@
         <!-- Hero Section -->
         <section class="hero-section text-white h-[50vh] md:h-[60vh] flex items-center justify-center">
             <div id="hero-slideshow">
-                <div class="hero-slide active" style="background-image: url('images/Hompaged1.png');"></div>
-                <div class="hero-slide" style="background-image: url('images/Hompaged2.png');"></div>
-                <div class="hero-slide" style="background-image: url('images/Hompaged3.png');"></div>
+                <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1579154286993-4a7996aa33d3?q=80&w=2874&auto=format&fit=crop');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2940&auto=format&fit=crop');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2940&auto=format&fit=crop');"></div>
             </div>
-             <div class="hero-content text-center bg-black bg-opacity-30 p-8 rounded-lg">
-                <h2 class="text-4xl md:text-6xl font-bold">From computational to real world</h2>
-                <h2 class="text-4xl md:text-6xl font-bold mt-2">cancer immunotherapy</h2>
+             <div class="hero-content text-center bg-black bg-opacity-40 p-8 rounded-lg">
+                <h2 class="text-4xl md:text-6xl font-bold hero-gradient-text">From computational to real world</h2>
+                <h2 class="text-4xl md:text-6xl font-bold mt-2 hero-gradient-text">cancer immunotherapy</h2>
             </div>
         </section>
 
         <!-- Our Founder Section -->
-        <section class="py-16 sm:py-24 bg-white">
+        <section class="py-16 sm:py-24 bg-purple-50">
             <div class="container mx-auto px-6">
                 <h3 class="text-3xl font-bold text-gray-900 text-center">Our founder</h3>
                 <p class="text-lg text-purple-600 mt-1 text-center">The Bioadventure Team</p>
@@ -149,7 +153,7 @@
                             <p class="text-sm text-gray-500">C.E.O.</p>
                             <p class="text-gray-600 italic mt-4">"Our goal is to translate complex data into tangible hope for patients."</p>
                         </div>
-                        <button onclick="showFounderDetails('Mr. Chotiphat Bijananda', 'C.E.O.', 'images/person1.png', 'Mr. Chotiphat Bijananda, C.E.O, is well-known businessman in finance and banking. He is a chairman and board member in many top businesses in Thailand, Singapore and Southeast Asia, such as Fraser group, TCC group and Thai group holding (TGH). TGH is a holding company operating in the Life insurance business, non-life insurance business, and financing business (Leasing & Corporate Lending). His experiences will lead our company to the worldwide market. He graduated M.B.A., in Finance and Banking, from University of Missouri, U.S.A., and Bachelor degree in Law at Thammasat University, Thailand.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Mr. Chotiphat Bijananda</button>
+                        <button onclick="showFounderDetails('Mr. Chotiphat Bijananda', 'C.E.O.', 'images/Person1.png', 'Mr. Chotiphat Bijananda, C.E.O, is well-known businessman in finance and banking. He is a chairman and board member in many top businesses in Thailand, Singapore and Southeast Asia, such as Fraser group, TCC group and Thai group holding (TGH). TGH is a holding company operating in the Life insurance business, non-life insurance business, and financing business (Leasing & Corporate Lending). His experiences will lead our company to the worldwide market. He graduated M.B.A., in Finance and Banking, from University of Missouri, U.S.A., and Bachelor degree in Law at Thammasat University, Thailand.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Mr. Chotiphat Bijananda</button>
                     </div>
                     <!-- Founder Card 2 -->
                     <div class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow flex flex-col">
@@ -159,7 +163,7 @@
                             <p class="text-sm text-gray-500">C.O.O</p>
                             <p class="text-gray-600 italic mt-4">"We are building the computational engine to power the next generation of cancer therapies."</p>
                         </div>
-                        <button onclick="showFounderDetails('Mr. Komkrit Sajjaanantakul', 'C.O.O', 'images/person2.png', 'Mr. Komkrit Sajjaanantakul, C.O.O., is a multi-disciplinary person, as a businessperson as well as architect in practice. He is known as one of the pioneers in technology startup entrepreneurship in Thailand. He graduated with degrees in M.B.A. (Chulalongkorn University) and M. Arch. (U. of Michigan, Ann Arbor USA.). His experiences move from a professional architect to a high-tech startup entrepreneur, from the Real estate business to Biotechnology and Nanotechnology business. He will devote his experiences to accelerate our technology to the real-world market.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Mr. Komkrit Sajjaanantakul</button>
+                        <button onclick="showFounderDetails('Mr. Komkrit Sajjaanantakul', 'C.O.O', 'images/Person2.png', 'Mr. Komkrit Sajjaanantakul, C.O.O., is a multi-disciplinary person, as a businessperson as well as architect in practice. He is known as one of the pioneers in technology startup entrepreneurship in Thailand. He graduated with degrees in M.B.A. (Chulalongkorn University) and M. Arch. (U. of Michigan, Ann Arbor USA.). His experiences move from a professional architect to a high-tech startup entrepreneur, from the Real estate business to Biotechnology and Nanotechnology business. He will devote his experiences to accelerate our technology to the real-world market.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Mr. Komkrit Sajjaanantakul</button>
                     </div>
                     <!-- Founder Card 3 -->
                     <div class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow flex flex-col">
@@ -169,7 +173,7 @@
                             <p class="text-sm text-gray-500">Co-founder</p>
                             <p class="text-gray-600 italic mt-4">"Our mission is to bridge the gap between innovative science and patient care."</p>
                         </div>
-                        <button onclick="showFounderDetails('Prof. Dr. Suradej Hongeng', 'Co-founder', 'images/person3.png', 'Prof. Dr. Suradej Hongeng, M.D., is a pediatric oncologist specialized in stem cells transplantation and cancer treatment. He received the American Board of Pediatric Hematology and Oncology, St. Jude Children Research Hospital, USA in 1996. He has been receiving several big grants related to gene therapy for thalassemia patients and immunotherapy in cancer treatment. To date, he has published more than 251 articles with an h-index of 34. He and his team have established many research centers aiming to develop more translational research. With his continuous great work and dedication, he was awarded by The National Research Council of Thailand in 2019 as an outstanding researcher.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Prof. Dr. Suradej Hongeng</button>
+                        <button onclick="showFounderDetails('Prof. Dr. Suradej Hongeng', 'Co-founder', 'images/Person3.png', 'Prof. Dr. Suradej Hongeng, M.D., is a pediatric oncologist specialized in stem cells transplantation and cancer treatment. He received the American Board of Pediatric Hematology and Oncology, St. Jude Children Research Hospital, USA in 1996. He has been receiving several big grants related to gene therapy for thalassemia patients and immunotherapy in cancer treatment. To date, he has published more than 251 articles with an h-index of 34. He and his team have established many research centers aiming to develop more translational research. With his continuous great work and dedication, he was awarded by The National Research Council of Thailand in 2019 as an outstanding researcher.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Prof. Dr. Suradej Hongeng</button>
                     </div>
                     <!-- Founder Card 4 -->
                     <div class="bg-white border border-gray-200 rounded-xl p-6 text-center hover:shadow-lg transition-shadow flex flex-col">
@@ -179,7 +183,7 @@
                             <p class="text-sm text-gray-500">Co-Founder</p>
                             <p class="text-gray-600 italic mt-4">"Every clinical trial is a step closer to a future free from cancer."</p>
                         </div>
-                        <button onclick="showFounderDetails('Assoc. Prof. Dr. Patompon Wongtrakoongate', 'Co-Founder', 'images/person4.png', 'Dr. Patompon Wongtrakoongate is an Associate Professor in the Department of Biochemistry, Faculty of Science at Mahidol University. He received a B.Sc. in biology from Mahidol University and a Ph.D. in biomedical science from the University of Sheffield in UK. He then trained at NIH, as a visiting fellow on long non-coding RNAs and epigenetics. The research done in his laboratory aims to understand RNA functions, and to develop novel mRNA medicines for non-communicable diseases and infectious diseases. His experience led to development of the first circular mRNA vaccine prototype in Thailand for COVID-19.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Assoc. Prof. Dr. Patompon Wongtrakoongate</button>
+                        <button onclick="showFounderDetails('Assoc. Prof. Dr. Patompon Wongtrakoongate', 'Co-Founder', 'images/Person4.png', 'Dr. Patompon Wongtrakoongate is an Associate Professor in the Department of Biochemistry, Faculty of Science at Mahidol University. He received a B.Sc. in biology from Mahidol University and a Ph.D. in biomedical science from the University of Sheffield in UK. He then trained at NIH, as a visiting fellow on long non-coding RNAs and epigenetics. The research done in his laboratory aims to understand RNA functions, and to develop novel mRNA medicines for non-communicable diseases and infectious diseases. His experience led to development of the first circular mRNA vaccine prototype in Thailand for COVID-19.')" class="text-sm mt-6 w-full bg-purple-100 text-purple-700 font-semibold py-2 px-4 rounded-lg hover:bg-purple-200 transition-colors">About Assoc. Prof. Dr. Patompon Wongtrakoongate</button>
                     </div>
                 </div>
             </div>
@@ -203,7 +207,7 @@
                                 </div>
                             </div>
                         </summary>
-                        <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200">A neoepitope is a new protein fragment that appears on the surface of cancer cells due to gene mutations. Since these fragments are not present on normal, healthy cells, the immune system can recognize them as foreign invaders and launch an attack specifically against the tumor. They are a primary target for developing personalized cancer vaccines and immunotherapies.</p>
+                        <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200 text-justify">A neoepitope is a new protein fragment that appears on the surface of cancer cells due to gene mutations. Since these fragments are not present on normal, healthy cells, the immune system can recognize them as foreign invaders and launch an attack specifically against the tumor. They are a primary target for developing personalized cancer vaccines and immunotherapies.</p>
                     </details>
                     <!-- Card 2 -->
                     <details class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow group">
@@ -217,7 +221,7 @@
                                 </div>
                             </div>
                         </summary>
-                        <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200">This topic covers the latest progress in therapeutic strategies against cancer. Key advancements include immunotherapies that empower the patient's immune system to fight cancer, targeted therapies that attack specific molecules driving cancer growth, and precision medicine, which customizes treatment based on a tumor's genetic profile. These new approaches are improving survival rates and quality of life for many patients.</p>
+                        <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200 text-justify">This topic covers the latest progress in therapeutic strategies against cancer. Key advancements include immunotherapies that empower the patient's immune system to fight cancer, targeted therapies that attack specific molecules driving cancer growth, and precision medicine, which customizes treatment based on a tumor's genetic profile. These new approaches are improving survival rates and quality of life for many patients.</p>
                     </details>
                     <!-- Card 3 -->
                      <details class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow group">
@@ -231,7 +235,7 @@
                                 </div>
                             </div>
                         </summary>
-                        <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200">CircularRNA (circRNA) is a unique type of RNA molecule that forms a continuous, closed loop. Initially dismissed as a biological error, circRNAs are now understood to play crucial roles in regulating gene expression. In the context of disease, they can influence cell processes like growth and survival, often by acting as "sponges" for other molecules. They are now being studied as potential diagnostic markers and therapeutic targets for cancer and other illnesses.</p>
+                        <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200 text-justify">CircularRNA (circRNA) is a unique type of RNA molecule that forms a continuous, closed loop. Initially dismissed as a biological error, circRNAs are now understood to play crucial roles in regulating gene expression. In the context of disease, they can influence cell processes like growth and survival, often by acting as "sponges" for other molecules. They are now being studied as potential diagnostic markers and therapeutic targets for cancer and other illnesses.</p>
                     </details>
                     <!-- Card 4 -->
                     <details class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow group">
@@ -245,7 +249,7 @@
                                 </div>
                             </div>
                         </summary>
-                         <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200">GMP stands for Good Manufacturing Practice. A GMP facility is a production site that follows strict quality and safety regulations enforced by authorities like the FDA. These rules ensure that products—such as pharmaceuticals, vaccines, or medical devices—are manufactured in a controlled, sterile, and consistent environment. Adherence to GMP is mandatory to guarantee that every batch of a product is safe, pure, and effective.</p>
+                         <p class="text-gray-600 mt-4 pt-4 border-t border-gray-200 text-justify">GMP stands for Good Manufacturing Practice. A GMP facility is a production site that follows strict quality and safety regulations enforced by authorities like the FDA. These rules ensure that products—such as pharmaceuticals, vaccines, or medical devices—are manufactured in a controlled, sterile, and consistent environment. Adherence to GMP is mandatory to guarantee that every batch of a product is safe, pure, and effective.</p>
                     </details>
                 </div>
             </div>
@@ -308,14 +312,14 @@
     <!-- Founder Details Modal -->
     <div id="founder-modal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
         <div class="modal-content bg-white rounded-xl shadow-2xl w-full max-w-lg p-8 relative" onclick="event.stopPropagation()">
-            <button onclick="closeFounderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">&times;</button>
+            <button onclick="closeFounderModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-3xl leading-none">&times;</button>
             <div class="text-center">
                 <img id="modal-founder-img" src="" class="w-32 h-32 rounded-full mx-auto mb-4" alt="Founder">
                 <h3 id="modal-founder-name" class="text-2xl font-bold text-gray-900"></h3>
                 <p id="modal-founder-title" class="text-purple-600"></p>
             </div>
             <div id="modal-founder-details" class="text-gray-700 mt-6 pt-6 border-t space-y-4 text-left">
-                <!-- Details will be injected here -->
+                <!-- Details will be injected here by JavaScript -->
             </div>
         </div>
     </div>
@@ -350,7 +354,15 @@
             const img = founderModal.querySelector('#modal-founder-img');
             img.src = imgSrc;
             img.onerror = function() { this.src='https://placehold.co/128x128/E9D5FF/312e81?text=Bio'; };
-            founderModal.querySelector('#modal-founder-details').innerHTML = `<p>${details}</p>`;
+            
+            // MODIFICATION: Correctly create a paragraph and add the text-justify class
+            const detailsContainer = founderModal.querySelector('#modal-founder-details');
+            detailsContainer.innerHTML = ''; // Clear previous content before adding new
+            const p = document.createElement('p');
+            p.textContent = details;
+            p.className = 'text-justify'; // Apply the justify class
+            detailsContainer.appendChild(p);
+
             founderModal.classList.remove('hidden');
         }
 
@@ -358,6 +370,7 @@
             founderModal.classList.add('hidden');
         }
 
+        // --- Event Listeners for Modal ---
         founderModal.addEventListener('click', closeFounderModal);
         window.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && !founderModal.classList.contains('hidden')) {
