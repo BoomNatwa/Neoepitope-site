@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - BIO adventure</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Animated gradient background to match the other pages */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .logo-gradient-text {
+            background: linear-gradient(to right, #6d28d9, #14b8a6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* New gradient for dark backgrounds */
+        .logo-gradient-text-dark {
+            background: linear-gradient(to right, #a78bfa, #5eead4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen p-4">
+
+    <!-- Main Content Area -->
+    <main class="flex-grow flex items-center justify-center">
+        <div class="w-full max-w-4xl mx-auto bg-white/70 backdrop-blur-xl border border-white/30 rounded-2xl shadow-2xl overflow-hidden">
+            <div class="grid md:grid-cols-5">
+                <!-- Left Panel: Welcome Message & Logo -->
+                <div class="hidden md:flex md:col-span-2 flex-col justify-center p-12 bg-purple-700 text-white">
+                    <a href="../index.html" class="inline-block mb-6 transition-transform hover:scale-105">
+                        <h1 class="text-5xl font-extrabold logo-gradient-text-dark">BIO</h1>
+                        <span class="text-xl font-bold text-teal-300 -mt-2 tracking-wide">adventure</span>
+                    </a>
+                    <h2 class="text-3xl font-bold mb-4">Welcome to our company</h2>
+                    <p class="text-purple-200">You are just a few steps away from joining the forefront biotechnological for novel cancer treatment.</p>
+                     <div class="mt-8">
+                        <a href="Login.html" class="inline-block w-full text-center bg-white/30 font-bold py-3 px-4 rounded-lg hover:bg-white/40 transition-all duration-300">
+                            Already have an account?
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Registration Form -->
+                <div class="md:col-span-3 p-8 md:p-12">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Create Account</h2>
+                    <p class="text-center text-gray-600 mb-8">Let's get you started.</p>
+                    
+                    <form action="#">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- First Name -->
+                            <input type="text" placeholder="First Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                            <!-- Last Name -->
+                            <input type="text" placeholder="Last Name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                            <!-- Email -->
+                            <input type="email" placeholder="Email Address" class="md:col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                            <!-- Phone -->
+                            <input type="tel" placeholder="Phone Number" class="md:col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition">
+                            <!-- Password -->
+                            <input type="password" placeholder="Password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                            <!-- Confirm Password -->
+                            <input type="password" placeholder="Confirm Password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                            <!-- Security Question -->
+                            <select class="md:col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                                <option selected disabled>Please select a security question</option>
+                                <option>What was your first pet's name?</option>
+                                <option>What city were you born in?</option>
+                                <option>What is your mother's maiden name?</option>
+                            </select>
+                            <!-- Answer -->
+                            <input type="text" placeholder="Your Answer" class="md:col-span-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-purple-500 focus:border-purple-500 block w-full p-3 transition" required>
+                        </div>
+
+                        <!-- Register Button -->
+                        <div class="mt-6">
+                            <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-purple-700 focus:outline-none focus:ring-4 focus:ring-purple-300 transition-all duration-300 transform hover:scale-105">
+                                Register
+                            </button>
+                        </div>
+                    </form>
+                     <p class="text-center text-gray-500 text-xs mt-6 md:hidden">
+                        Already have an account? <a href="Login.html" class="font-bold text-purple-600 hover:underline">Login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="text-center text-white/70 text-xs py-6">
+        &copy; 2025 by Bio-adventure. Created with NM
+    </footer>
+
+</body>
+</html>
