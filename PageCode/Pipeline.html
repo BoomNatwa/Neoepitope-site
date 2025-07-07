@@ -11,7 +11,7 @@
     <!-- Google Fonts: Inter and Chakra Petch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Chakra+Petch:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
     <style>
@@ -19,15 +19,18 @@
         body {
             font-family: 'Chakra Petch', sans-serif;
         }
-        
-        /* Use Inter for more readable UI elements */
-        h1, h2, h3, h4, h5, h6, button, nav a, summary {
-             font-family: 'Inter', sans-serif;
-        }
 
         /* --- Gradient Text Styles --- */
         .logo-gradient-text {
             background: linear-gradient(to right, #6d28d9, #14b8a6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-gradient-text {
+            background: linear-gradient(to right, #a78bfa, #5eead4);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -90,7 +93,7 @@
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <a href="#" class="flex flex-col items-start flex-shrink-0">
+                <a href="../index.html" class="flex flex-col items-start flex-shrink-0">
                     <h1 class="text-3xl font-bold logo-gradient-text">BIO</h1>
                     <span class="text-lg font-semibold text-purple-700 -mt-2">adventure</span>
                     <span class="text-xs text-gray-500 tracking-widest">COMPANY LIMITED</span>
@@ -108,7 +111,7 @@
 
                 <!-- Right side icons & Mobile Menu Button -->
                 <div class="flex items-center space-x-2">
-                    <a href="Login.html" class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-teal-400 hover:opacity-90 transition-opacity" aria-label="Login or User Profile">
+                    <a href="#" class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-teal-400 hover:opacity-90 transition-opacity" aria-label="Login or User Profile">
                          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" /></svg>
                     </a>
                     <div class="md:hidden">
@@ -137,7 +140,7 @@
         <!-- Hero Section -->
         <section class="animated-gradient-bg py-24 text-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-6xl font-bold">Our Discovery Pipeline</h2>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold">Our Discovery Pipeline</h1>
                 <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">Leveraging cutting-edge bioinformatics and multi-omics data to identify novel antigens for cancer immunotherapy.</p>
             </div>
         </section>
@@ -146,7 +149,7 @@
         <section class="py-20 bg-gray-100">
             <div class="container mx-auto px-6">
                 <div class="mb-20 text-center">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Overall Research Pipeline</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Overall Research Pipeline</h2>
                     <p class="text-gray-600 max-w-3xl mx-auto">Our process integrates genomic and proteomic data to identify high-potential neoantigens and tumor-associated antigens for therapeutic development.</p>
                 </div>
 
@@ -209,7 +212,7 @@
             <!-- Timeline Section -->
             <div class="container mx-auto px-6 mt-24">
                 <div class="text-center mb-16">
-                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Detailed Neoantigen Identification</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Detailed Neoantigen Identification</h2>
                     <p class="text-gray-600 max-w-3xl mx-auto">Our computational pipeline meticulously filters and ranks candidates to find the most promising neoantigens for therapeutic use.</p>
                 </div>
                 <div id="timeline" class="space-y-4 relative">
@@ -271,8 +274,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-10 gap-8">
                 <div class="lg:col-span-3 mb-6 md:mb-0">
                     <a href="../index.html" class="flex flex-col items-start">
-                        <h1 class="text-3xl font-bold text-white">BIO adventure</h1>
-                        <span class="text-sm text-gray-300 tracking-widest">COMPANY LIMITED</span>
+                        <h1 class="text-3xl font-bold text-white">BIO</h1>
+                        <span class="text-sm text-gray-300 tracking-widest">adventure</span>
                     </a>
                      <p class="text-gray-300 mt-4">Pioneering the future of cancer immunotherapy through computational science.</p>
                 </div>
@@ -289,14 +292,14 @@
                     <h4 class="font-bold text-white mb-4">Quick Links</h4>
                      <nav class="space-y-2">
                         <a href="../index.html" class="block text-gray-300 hover:text-white transition-colors">Home</a>
-                        <a href="../index.html" class="block text-gray-300 hover:text-white transition-colors">About us</a>
+                        <a href="../index.html#about" class="block text-gray-300 hover:text-white transition-colors">About us</a>
                         <a href="Pipeline.html" class="block text-gray-300 hover:text-white transition-colors">Science & Innovation</a>
-                        <a href="Contact.html" class="block text-gray-300 hover:text-white transition-colors">Contact</a>
+                        <a href="#" class="block text-gray-300 hover:text-white transition-colors">Contact</a>
                     </nav>
                 </div>
             </div>
             <div class="mt-12 pt-8 border-t border-white/20 flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
-                <p class="mb-4 md:mb-0">&copy; 2025 by Bio-adventure. Created with NM</p>
+                <p class="mb-4 md:mb-0">&copy; 2025 by Bio-adventure. All rights reserved.</p>
             </div>
         </div>
     </footer>
