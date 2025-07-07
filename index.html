@@ -90,11 +90,13 @@
                     <span class="text-xs text-gray-500 tracking-widest">COMPANY LIMITED</span>
                 </a>
 
+                <!-- MODIFICATION: Added flex-grow and justify-around to spread links across the available width -->
                 <!-- Desktop Navigation -->
-                <nav id="desktop-nav" class="hidden md:flex items-center space-x-6">
+                <nav id="desktop-nav" class="hidden md:flex items-center flex-grow justify-around">
                     <a href="#" class="nav-link nav-active hover:animate-bounce pb-1">About us</a>
-                    <a href="PageCode/Product.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Products</a>
+                    <!-- MODIFICATION: Swapped Pipeline and Products -->
                     <a href="PageCode/Pipeline.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pipeline</a>
+                    <a href="PageCode/Product.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Products</a>
                     <a href="PageCode/Resources.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Resources</a>
                     <a href="PageCode/Pricing.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Pricing</a>
                     <a href="PageCode/Tool.html" class="nav-link text-gray-600 hover:animate-bounce transition-colors pb-1">Tool</a>
@@ -116,8 +118,9 @@
         <div class="md:hidden hidden" id="mobile-menu">
             <div class="px-4 pt-2 pb-4 sm:px-6 bg-white shadow-lg">
                 <a href="#" class="block px-3 py-2 text-base font-bold text-purple-600 bg-purple-50">About us</a>
-                <a href="PageCode/Product.html" class="block px-3 py-2 text-base font-medium text-gray-800">Products</a>
+                <!-- MODIFICATION: Swapped Pipeline and Products -->
                 <a href="PageCode/Pipeline.html" class="block px-3 py-2 text-base font-medium text-gray-800">Pipeline</a>
+                <a href="PageCode/Product.html" class="block px-3 py-2 text-base font-medium text-gray-800">Products</a>
                 <a href="PageCode/Resources.html" class="block px-3 py-2 text-base font-medium text-gray-800">Resources</a>
                 <a href="PageCode/Pricing.html" class="block px-3 py-2 text-base font-medium text-gray-800">Pricing</a>
                 <a href="PageCode/Tool.html" class="block px-3 py-2 text-base font-medium text-gray-800">Tool</a>
@@ -132,8 +135,13 @@
                 <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1579154286993-4a7996aa33d3?q=80&w=2874&auto=format&fit=crop');"></div>
                 <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2940&auto=format&fit=crop');"></div>
                 <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=2940&auto=format&fit=crop');"></div>
+                <!-- MODIFICATION: Added 3 new hero slides -->
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a1c8?q=80&w=2940&auto=format&fit=crop');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1554435493-93422e8a45a5?q=80&w=2832&auto=format&fit=crop');"></div>
+                <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1628333577238-3d4d4b7a3e7a?q=80&w=2874&auto=format&fit=crop');"></div>
             </div>
-             <div class="hero-content text-center bg-black bg-opacity-40 p-8 rounded-lg">
+             <!-- MODIFICATION: Added w-full and removed rounded-lg to make it a full-width banner -->
+             <div class="hero-content text-center bg-black bg-opacity-40 p-8 w-full">
                 <h2 class="text-4xl md:text-6xl font-bold hero-gradient-text">From computational to real world</h2>
                 <h2 class="text-4xl md:text-6xl font-bold mt-2 hero-gradient-text">cancer immunotherapy</h2>
             </div>
